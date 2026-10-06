@@ -1,44 +1,69 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { gsap } from 'gsap'
-import { SystemBoot } from '../features/boot/SystemBoot'
-import { AnalysisEnvironment } from '../features/environment/AnalysisEnvironment'
-
-function hasSeenBoot() {
-  try { return sessionStorage.getItem('rsa-boot-seen') === '1' } catch { return false }
-}
+import { useState, useEffect, useRef } from 'react'
+import Lenis from 'lenis'
+import { CinematicIntroScroll } from '../features/intro/CinematicIntroScroll'
+import { ScrollPresentation } from '../features/presentation/ScrollPresentation'
+import { VivaDefenseModal } from '../features/viva/VivaDefenseModal'
 
 export default function Page() {
-  const [booting, setBooting] = useState(() => !hasSeenBoot())
-  const envRef = useRef<HTMLDivElement>(null)
+  const [isVivaOpen, setIsVivaOpen] = useState<boolean>(false)
+  const presentationRef = useRef<HTMLDivElement>(null)
 
-  const enterEnvironment = useCallback(() => {
-    try { sessionStorage.setItem('rsa-boot-seen', '1') } catch { /* restricted context */ }
+  // Initialize Lenis smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    })
 
-    // Animate environment in
-    gsap.fromTo(
-      envRef.current,
-      { autoAlpha: 0 },
-      { autoAlpha: 1, duration: 1.1, ease: 'power2.inOut', delay: 0.1 }
-    )
-    setBooting(false)
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    const rafId = requestAnimationFrame(raf)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      lenis.destroy()
+    }
   }, [])
 
-  // ESC anywhere dismisses boot
+  // Keyboard shortcut: V for Viva Defense
   useEffect(() => {
-    if (!booting) return
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') enterEnvironment()
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'v' || e.key === 'V') {
+        setIsVivaOpen(prev => !prev)
+      }
     }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [booting, enterEnvironment])
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  const handleScrollToPresentation = () => {
+    presentationRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
-    <>
-      {booting && <SystemBoot onComplete={enterEnvironment} />}
-      <div ref={envRef} style={{ opacity: booting ? 0 : 1 }}>
-        <AnalysisEnvironment />
+    <main style={{ backgroundColor: '#06080E', minHeight: '100vh', color: '#F5F0E8' }}>
+      {/* 01: Centered, prestigious cinematic intro & highlighted credentials */}
+      <CinematicIntroScroll onEnter={handleScrollToPresentation} />
+
+      {/* 02: Full GSAP ScrollTrigger presentation film */}
+      <div ref={presentationRef}>
+        <ScrollPresentation
+          onOpenViva={() => setIsVivaOpen(true)}
+          onReplayIntro={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+        />
       </div>
-    </>
+
+      {/* Full-screen Viva Defense Modal */}
+      <VivaDefenseModal
+        isOpen={isVivaOpen}
+        onClose={() => setIsVivaOpen(false)}
+      />
+    </main>
   )
 }
