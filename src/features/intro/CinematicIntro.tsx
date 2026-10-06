@@ -173,7 +173,14 @@ export function CinematicIntro({ onComplete }: { onComplete: () => void }) {
         '-=0.25'
       )
 
-      // ── SCENE 08: ENTRY — fade entire intro ──
+      // ── SCENE 08: CREDENTIALS & FACULTY ──
+      tl.fromTo('.intro-credentials-block',
+        { autoAlpha: 0, y: 16 },
+        { autoAlpha: 1, y: 0, duration: 0.6, ease: 'power2.out' },
+        '-=0.15'
+      )
+
+      // ── SCENE 09: ENTRY — fade entire intro ──
       tl.to(root.current,
         { autoAlpha: 0, duration: 1.1, delay: 1.2, ease: 'power2.inOut' }
       )
@@ -269,6 +276,21 @@ export function CinematicIntro({ onComplete }: { onComplete: () => void }) {
             <p className="intro-identity-line">
               {research.institution} <span>· {research.affiliation}</span>
             </p>
+          </div>
+          
+          {/* CREDENTIALS & FACULTY BLOCK */}
+          <div className="intro-credentials-block">
+            <div className="credentials-row">
+              <div className="credential-item">
+                <span className="credential-label">GUIDE</span>
+                <span className="credential-value">{research.guide}</span>
+              </div>
+              <div className="credential-divider" aria-hidden="true">·</div>
+              <div className="credential-item">
+                <span className="credential-label">DEPARTMENT HEAD</span>
+                <span className="credential-value">{research.departmentHead}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
