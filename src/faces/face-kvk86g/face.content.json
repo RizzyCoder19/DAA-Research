@@ -1,0 +1,85 @@
+{
+  "blocks": {
+    "sectionNo": { "type": "text", "content": "02 / 06" },
+    "sectionTitle": { "type": "text", "content": "Recursion &amp; Recurrence Relations" },
+    "sectionNote": { "type": "text", "content": "Working Principle" },
+    "coreLabel": { "type": "text", "content": "Core Point" },
+    "coreStatement": { "type": "text", "content": "A recursive algorithm solves a problem by reducing it to smaller instances of the same problem." },
+    "eqLabel": { "type": "text", "content": "The Recurrence Model &mdash; hover each term" },
+    "whyRecurrence": { "type": "text", "content": "A recurrence translates the recursive structure of an algorithm into a mathematical equation, so its asymptotic behaviour can be derived rather than guessed." },
+    "ladderLabel": { "type": "text", "content": "Conceptual Reduction" },
+    "qLabel": { "type": "text", "content": "Anticipated Question" },
+    "questions": {
+      "type": "table",
+      "columns": [
+        { "key": "question", "title": "Question", "type": "text" },
+        { "key": "answer", "title": "Answer", "type": "text" }
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "question": "What is a recurrence relation?",
+          "answer": "An equation that defines the cost of a recursive algorithm in terms of the cost of its own smaller subproblems, together with the work done outside the recursive calls."
+        },
+        {
+          "id": "q2",
+          "question": "Why is a base case necessary?",
+          "answer": "It is the condition at which reduction stops. Without it the recursion never terminates and the call stack grows without bound."
+        }
+      ]
+    },
+    "components": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Name", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "c1", "name": "Recursive Case", "detail": "Defines how the current problem is reduced into smaller subproblems of the same form." },
+        { "id": "c2", "name": "Base Case", "detail": "Defines the condition at which the reduction stops and recursion terminates." },
+        { "id": "c3", "name": "Reduction Factor", "detail": "Describes how quickly the problem size decreases at each recursive step." }
+      ]
+    },
+    "ladder": {
+      "type": "table",
+      "columns": [
+        { "key": "label", "title": "Label", "type": "text" },
+        { "key": "note", "title": "Note", "type": "text" }
+      ],
+      "rows": [
+        { "id": "l1", "label": "Problem of size n", "note": "Original instance" },
+        { "id": "l2", "label": "Subproblem of size n/b", "note": "Same problem, smaller input" },
+        { "id": "l3", "label": "Subproblem of size n/b&sup2;", "note": "Reduction repeats" },
+        { "id": "l4", "label": "Base case", "note": "Solved directly; recursion unwinds" }
+      ]
+    },
+    "equationTerms": {
+      "type": "table",
+      "columns": [
+        { "key": "symbol", "title": "Symbol", "type": "text" },
+        { "key": "label", "title": "Label", "type": "text" },
+        { "key": "meaning", "title": "Meaning", "type": "text" }
+      ],
+      "rows": [
+        { "id": "t1", "symbol": "T(n)", "label": "T(n) &mdash; Total Cost", "meaning": "The running time required by the algorithm on an input of size n. This is the quantity the recurrence defines." },
+        { "id": "t2", "symbol": "=", "label": "The Recurrence", "meaning": "T(n) = aT(n/b) + f(n) expresses the cost of a recursive computation in terms of the cost of its own smaller subproblems." },
+        { "id": "t3", "symbol": "a", "label": "a &mdash; Number of Subproblems", "meaning": "How many recursive calls the algorithm makes at each level of the recursion." },
+        { "id": "t4", "symbol": "T(n/b)", "label": "n/b &mdash; Reduced Input", "meaning": "The size of each subproblem: b is the factor by which the input is divided at every recursive step." },
+        { "id": "t5", "symbol": "+", "label": "Composition of Cost", "meaning": "Total cost is the recursive work plus the work done outside the recursive calls at that level." },
+        { "id": "t6", "symbol": "f(n)", "label": "f(n) &mdash; Non-Recursive Work", "meaning": "Work performed outside the recursive calls: setup, comparisons, partitioning, scanning, and combining results." }
+      ]
+    },
+    "methods": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Method", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "m1", "name": "Recursion Tree", "detail": "Expands the recursive calls level by level and sums the work performed at each level." },
+        { "id": "m2", "name": "Substitution", "detail": "Proposes a solution form for T(n) and verifies the bound mathematically." },
+        { "id": "m3", "name": "Standard Results", "detail": "Recognises established recurrence patterns and applies their known asymptotic bounds." }
+      ]
+    }
+  }
+}

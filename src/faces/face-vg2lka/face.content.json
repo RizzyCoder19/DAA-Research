@@ -1,0 +1,80 @@
+{
+  "blocks": {
+    "sectionNo": { "type": "text", "content": "01 / 06" },
+    "sectionTitle": { "type": "text", "content": "Scope &amp; Research Methodology" },
+    "sectionNote": { "type": "text", "content": "Descriptive &middot; Analytical &middot; Literature-based" },
+    "scopeLabel": { "type": "text", "content": "Scope of the Study" },
+    "positionLabel": { "type": "text", "content": "Research Position" },
+    "position": { "type": "text", "content": "The study treats recursive algorithms as a broader analytical concept, not as one specific algorithm." },
+    "positionDetail": { "type": "text", "content": "It does not propose a new algorithm, a new theorem, or large-scale hardware benchmarking. Its contribution is an organised mathematical treatment of how recursive computation is modelled and analysed." },
+    "evalLabel": { "type": "text", "content": "Evaluation Criteria" },
+    "methodLabel": { "type": "text", "content": "Methodology &mdash; Seven-Step Procedure" },
+    "methodIntro": { "type": "text", "content": "A descriptive and analytical methodology: the topic is defined in standard algorithm terminology, its operations are explained through pseudocode-style reasoning and representative examples, and time and space requirements are then examined using asymptotic notation." },
+    "qLabel": { "type": "text", "content": "Anticipated Question" },
+    "questions": {
+      "type": "table",
+      "columns": [
+        { "key": "question", "title": "Question", "type": "text" },
+        { "key": "answer", "title": "Answer", "type": "text" }
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "question": "What methodology did you follow?",
+          "answer": "A descriptive and analytical method: define the problem, review standard literature, understand the algorithmic structure, identify the dominant operations, derive time and space bounds asymptotically, then interpret the trade-offs."
+        },
+        {
+          "id": "q2",
+          "question": "Did you implement or benchmark anything?",
+          "answer": "No. The work is theoretical and literature-based. Conclusions are derived mathematically rather than measured experimentally, which is why no runtime figures are claimed."
+        }
+      ]
+    },
+    "scopeItems": {
+      "type": "table",
+      "columns": [{ "key": "label", "title": "Label", "type": "text" }],
+      "rows": [
+        { "id": "s1", "label": "Recurrence Relations" },
+        { "id": "s2", "label": "Recursion Trees" },
+        { "id": "s3", "label": "Substitution" },
+        { "id": "s4", "label": "Asymptotic Notation" },
+        { "id": "s5", "label": "Time Complexity" },
+        { "id": "s6", "label": "Space Complexity" },
+        { "id": "s7", "label": "Recursion Stack" },
+        { "id": "s8", "label": "Applications" },
+        { "id": "s9", "label": "Advantages" },
+        { "id": "s10", "label": "Limitations" }
+      ]
+    },
+    "evalCriteria": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Criterion", "type": "text" },
+        { "key": "question", "title": "Question", "type": "text" }
+      ],
+      "rows": [
+        { "id": "e1", "name": "Correctness", "question": "Required result produced?" },
+        { "id": "e2", "name": "Efficiency", "question": "How does time grow with n?" },
+        { "id": "e3", "name": "Space", "question": "How much extra memory?" },
+        { "id": "e4", "name": "Scalability", "question": "Practical as n grows?" },
+        { "id": "e5", "name": "Applicability", "question": "Suitable where?" }
+      ]
+    },
+    "steps": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Step", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "m1", "name": "Identify the computational problem", "detail": "Establish what problem the topic addresses and what assumptions it requires." },
+        { "id": "m2", "name": "Define the structure or operation", "detail": "State the relevant data structure and algorithmic steps in standard terminology." },
+        { "id": "m3", "name": "Describe the main steps with an example", "detail": "Explain behaviour through a simple representative input of size n." },
+        { "id": "m4", "name": "Determine the dominant operations", "detail": "Constant-time setup matters less than loops, recursive calls, comparisons and repeated work." },
+        { "id": "m5", "name": "Express time and space asymptotically", "detail": "Formulate the recurrence and derive bounds using O, &Omega; and &Theta;." },
+        { "id": "m6", "name": "Discuss alternatives and trade-offs", "detail": "Weigh memory, implementation complexity and input characteristics." },
+        { "id": "m7", "name": "Summarise findings for design", "detail": "Interpret what the analysis implies for choosing between approaches." }
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "blocks": {
+    "sectionNo": { "type": "text", "content": "03 / 06" },
+    "sectionTitle": { "type": "text", "content": "Asymptotic Notation, Time &amp; Space" },
+    "sectionNote": { "type": "text", "content": "Complexity Analysis" },
+    "timeLabel": { "type": "text", "content": "Time Complexity &mdash; How It Is Derived" },
+    "keyInsightLabel": { "type": "text", "content": "Key Insight" },
+    "keyInsight": { "type": "text", "content": "There is no single time complexity for recursive algorithms as a whole. The bound must be derived from the specific recurrence and algorithm structure." },
+    "timeDetail": { "type": "text", "content": "Work growing proportionally with n gives linear behaviour; repeatedly reducing the problem by a constant factor can give logarithmic behaviour; combining every element with many others may give quadratic behaviour." },
+    "spaceLabel": { "type": "text", "content": "Space Complexity &mdash; Recursion Stack" },
+    "spaceIntro": { "type": "text", "content": "Space analysis separates memory holding the input from auxiliary memory used by the algorithm. In-place methods may use O(1) auxiliary storage apart from recursion overhead; those building extra arrays, lists or tables may need O(n) or more." },
+    "spaceTakeaway": { "type": "text", "content": "Recursion depth directly determines auxiliary stack space: each active call keeps its own frame in memory." },
+    "curvesLabel": { "type": "text", "content": "Growth Patterns" },
+    "curvesNote": { "type": "text", "content": "Different growth rates may look similar for small inputs, but asymptotic differences become decisive as n increases. Actual execution time still depends on hardware, language, compiler and input distribution." },
+    "qLabel": { "type": "text", "content": "Anticipated Questions" },
+    "questions": {
+      "type": "table",
+      "columns": [
+        { "key": "question", "title": "Question", "type": "text" },
+        { "key": "answer", "title": "Answer", "type": "text" }
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "question": "What is Big-O notation?",
+          "answer": "An upper-bound description of growth: the running time does not exceed f(n), up to constant factors, for sufficiently large n."
+        },
+        {
+          "id": "q2",
+          "question": "How did you analyse time and space complexity?",
+          "answer": "By identifying the dominant operations, formulating the recurrence, expanding or bounding it, and expressing the result using asymptotic notation. Space was analysed by separating input storage from auxiliary memory, including recursion stack depth."
+        },
+        {
+          "id": "q3",
+          "question": "Does Big-O give the actual running time?",
+          "answer": "No. It describes growth rate, not measured time. Hardware, compiler, memory behaviour and input distribution all affect real execution."
+        }
+      ]
+    },
+    "bounds": {
+      "type": "table",
+      "columns": [
+        { "key": "symbol", "title": "Symbol", "type": "text" },
+        { "key": "name", "title": "Name", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "b1", "symbol": "O(f(n))", "name": "Upper Bound &mdash; Big-O", "detail": "Growth does not exceed f(n), up to constant factors, for sufficiently large n." },
+        { "id": "b2", "symbol": "&Omega;(f(n))", "name": "Lower Bound &mdash; Big-Omega", "detail": "Growth is at least f(n), up to constant factors, for sufficiently large n." },
+        { "id": "b3", "symbol": "&Theta;(f(n))", "name": "Tight Bound &mdash; Big-Theta", "detail": "Used when upper and lower bounds match and the growth rate is pinned exactly." }
+      ]
+    },
+    "timeChain": {
+      "type": "table",
+      "columns": [{ "key": "label", "title": "Label", "type": "text" }],
+      "rows": [
+        { "id": "tc1", "label": "Recursive structure" },
+        { "id": "tc2", "label": "&rarr; Recurrence" },
+        { "id": "tc3", "label": "&rarr; Dominant operations" },
+        { "id": "tc4", "label": "&rarr; Asymptotic bound" }
+      ]
+    },
+    "stackFrames": {
+      "type": "table",
+      "columns": [
+        { "key": "frame", "title": "Frame", "type": "text" },
+        { "key": "note", "title": "Note", "type": "text" }
+      ],
+      "rows": [
+        { "id": "sf1", "frame": "call(n)", "note": "frame 1" },
+        { "id": "sf2", "frame": "call(n/b)", "note": "frame 2" },
+        { "id": "sf3", "frame": "call(n/b&sup2;)", "note": "frame 3" },
+        { "id": "sf4", "frame": "call(base)", "note": "deepest frame" }
+      ]
+    }
+  }
+}

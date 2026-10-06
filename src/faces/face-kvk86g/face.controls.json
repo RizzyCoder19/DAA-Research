@@ -1,0 +1,5 @@
+{
+  "controls": {
+    "showReductionLadder": { "type": "switch", "value": true }
+  }
+}

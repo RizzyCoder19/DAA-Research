@@ -1,0 +1,40 @@
+{
+  "name": "recursive-analysis",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --configLoader runner",
+    "build": "vite build --configLoader runner",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/app src/content src/features src/main.tsx src/hooks/useSmoothScroll.ts src/hooks/usePresentationMode.ts src/hooks/useScrollStoryMotion.ts",
+    "preview": "vite preview --configLoader runner"
+  },
+  "dependencies": {
+    "d3-hierarchy": "^3.1.2",
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "lucide-react": "0.577.0",
+    "motion": "latest",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/d3-hierarchy": "^3.1.7",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^10.12.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.6.0",
+    "typescript-eslint": "^8.71.0",
+    "vite": "^6.0.0"
+  }
+}

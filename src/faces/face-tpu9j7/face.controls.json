@@ -1,0 +1,5 @@
+{
+  "controls": {
+    "showClosingChain": { "type": "switch", "value": true }
+  }
+}

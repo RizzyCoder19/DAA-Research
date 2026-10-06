@@ -1,0 +1,34 @@
+{
+  "faces": [
+    {
+      "id": "face-ntq0fw",
+      "name": "Research Identity & Objectives",
+      "hidden": false
+    },
+    {
+      "id": "face-vg2lka",
+      "name": "Scope & Methodology",
+      "hidden": false
+    },
+    {
+      "id": "face-kvk86g",
+      "name": "Recursion & Recurrence Relations",
+      "hidden": false
+    },
+    {
+      "id": "face-dauvjr",
+      "name": "Asymptotic Notation & Complexity",
+      "hidden": false
+    },
+    {
+      "id": "face-id8y8e",
+      "name": "Applications, Advantages & Limitations",
+      "hidden": false
+    },
+    {
+      "id": "face-tpu9j7",
+      "name": "Contribution, Future Scope & Conclusion",
+      "hidden": false
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "blocks": {
+    "eyebrow": { "type": "text", "content": "Design &amp; Analysis of Algorithms / Research Paper" },
+    "paperTag": { "type": "text", "content": "S.Y. B.Sc. Data Science &mdash; Semester III" },
+    "title": { "type": "text", "content": "Mathematical Analysis of Recursive Algorithms" },
+    "subtitle": { "type": "text", "content": "Recurrence relations, recursion trees, substitution, and recursive complexity" },
+    "objLabel": { "type": "text", "content": "Research Objective" },
+    "objective": { "type": "text", "content": "To explain how recursive algorithms are structured, and how their time and space requirements can be analysed mathematically as input size grows." },
+    "qLabel": { "type": "text", "content": "Anticipated Question" },
+    "pillars": {
+      "type": "table",
+      "columns": [{ "key": "label", "title": "Label", "type": "text" }],
+      "rows": [
+        { "id": "p1", "label": "Recurrence Relations" },
+        { "id": "p2", "label": "Recursion Trees" },
+        { "id": "p3", "label": "Substitution" },
+        { "id": "p4", "label": "Asymptotic Complexity" }
+      ]
+    },
+    "questions": {
+      "type": "table",
+      "columns": [
+        { "key": "question", "title": "Question", "type": "text" },
+        { "key": "answer", "title": "Answer", "type": "text" }
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "question": "What is the main objective of your research?",
+          "answer": "To study how recursive algorithms work and how their efficiency can be expressed mathematically, so that time and space behaviour can be compared independently of any particular machine."
+        },
+        {
+          "id": "q2",
+          "question": "Why does algorithm efficiency need to be studied?",
+          "answer": "Because a correct solution is not automatically a usable one. Two methods solving the same problem can differ sharply in running time and memory once the input becomes large."
+        }
+      ]
+    },
+    "credits": {
+      "type": "table",
+      "columns": [
+        { "key": "label", "title": "Label", "type": "text" },
+        { "key": "value", "title": "Value", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "c1", "label": "Submitted By", "value": "Khan Umar Abdulaziz", "detail": "Roll No. 45" },
+        { "id": "c2", "label": "Guided By", "value": "Prof. Jeicy Sahaya", "detail": "Department of Data Science" },
+        { "id": "c3", "label": "Head of Department", "value": "Prof. Khushali Sharma", "detail": "Department of Data Science" },
+        { "id": "c4", "label": "Institution", "value": "R.P. Institute of Hospitality &amp; Management", "detail": "University of Mumbai &middot; A.Y. 2026&ndash;2027" }
+      ]
+    }
+  }
+}

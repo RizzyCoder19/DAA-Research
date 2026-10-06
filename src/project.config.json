@@ -1,0 +1,61 @@
+{
+  "layout": "SLIDESHOW",
+  "slidesDisplay": "CARDS",
+  "stackedOrientation": "HORIZONTAL",
+  "mobileCanvas": "COMPACT",
+  "cardsBackgroundColor": "#0B0F17",
+  "tokens": {
+    "palette": [
+      {
+        "name": "--midnight",
+        "value": "#111827"
+      },
+      {
+        "name": "--royal",
+        "value": "#172033"
+      },
+      {
+        "name": "--ink",
+        "value": "#20283A"
+      },
+      {
+        "name": "--ivory",
+        "value": "#F7F2E8"
+      },
+      {
+        "name": "--ivory-soft",
+        "value": "#FFFDF8"
+      },
+      {
+        "name": "--gold",
+        "value": "#B08A45"
+      },
+      {
+        "name": "--champagne",
+        "value": "#D6BC83"
+      },
+      {
+        "name": "--warm-gray",
+        "value": "#6F6A61"
+      },
+      {
+        "name": "--wine",
+        "value": "#542632"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "--font-display",
+        "family": "Cormorant Garamond"
+      },
+      {
+        "name": "--font-body",
+        "family": "Inter"
+      },
+      {
+        "name": "--font-mono",
+        "family": "IBM Plex Mono"
+      }
+    ]
+  }
+}

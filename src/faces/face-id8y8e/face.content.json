@@ -1,0 +1,76 @@
+{
+  "blocks": {
+    "sectionNo": { "type": "text", "content": "04 / 06" },
+    "sectionTitle": { "type": "text", "content": "Applications, Advantages &amp; Trade-offs" },
+    "sectionNote": { "type": "text", "content": "Where The Analysis Applies" },
+    "appsIntro": { "type": "text", "content": "The principles of recursive analysis appear across many computing contexts. Their relevance in each domain depends on the exact problem and implementation." },
+    "advLabel": { "type": "text", "content": "Advantages" },
+    "limLabel": { "type": "text", "content": "Limitations &amp; Trade-offs" },
+    "tradeoff": { "type": "text", "content": "Algorithm design is a trade-off between correctness, efficiency, simplicity and resource constraints: a method excellent under one input model may be unsuitable under another." },
+    "qLabel": { "type": "text", "content": "Anticipated Questions" },
+    "questions": {
+      "type": "table",
+      "columns": [
+        { "key": "question", "title": "Question", "type": "text" },
+        { "key": "answer", "title": "Answer", "type": "text" }
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "question": "Where can these concepts be applied?",
+          "answer": "Wherever problems decompose into smaller instances of themselves: data organisation, searching, scheduling, graph processing, text processing, databases, compilers, operating systems, networking and scientific computing."
+        },
+        {
+          "id": "q2",
+          "question": "What are the limitations of your research?",
+          "answer": "It is theoretical, so asymptotic bounds do not capture hardware, compiler or cache effects, and no empirical measurements were performed. Results also depend on input assumptions."
+        }
+      ]
+    },
+    "domains": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Domain", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "d1", "name": "Data Organization", "detail": "Recursive decomposition supports hierarchical ways of structuring and maintaining data." },
+        { "id": "d2", "name": "Searching", "detail": "Repeatedly reducing the search space is naturally expressed and analysed recursively." },
+        { "id": "d3", "name": "Scheduling", "detail": "Complex tasks can be represented as smaller subproblems and analysed by decomposition." },
+        { "id": "d4", "name": "Graph Processing", "detail": "Recursive traversal applies where structures are hierarchical or connected." },
+        { "id": "d5", "name": "Text Processing", "detail": "Recursive structure supports parsing and pattern-oriented processing of input." },
+        { "id": "d6", "name": "Database Operations", "detail": "Relevant to hierarchical data and recursive query evaluation." },
+        { "id": "d7", "name": "Compilers", "detail": "Syntax analysis and parsing are classically recursive in structure." },
+        { "id": "d8", "name": "Operating Systems", "detail": "Recursive traversal suits hierarchical structures such as file systems." },
+        { "id": "d9", "name": "Networking", "detail": "Applies to routing and hierarchical packet-processing problems." },
+        { "id": "d10", "name": "Scientific Computing", "detail": "Recursive mathematical structures help model and simulate complex processes." }
+      ]
+    },
+    "advantages": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Name", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "a1", "name": "Systematic", "detail": "Provides a structured solution to a clearly defined computational problem." },
+        { "id": "a2", "name": "Measurable", "detail": "Allows efficiency to be evaluated using standard asymptotic measures." },
+        { "id": "a3", "name": "Implementable", "detail": "Can usually be realised with well-understood data structures." },
+        { "id": "a4", "name": "Foundational", "detail": "Provides a basis for more advanced algorithmic techniques." }
+      ]
+    },
+    "limitations": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Name", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "l1", "name": "Theory is not exact runtime", "detail": "Complexity does not capture every hardware, compiler or cache effect." },
+        { "id": "l2", "name": "Input assumptions matter", "detail": "Some methods depend strongly on data distribution or representation." },
+        { "id": "l3", "name": "Memory cost of speed", "detail": "Better performance may demand additional memory or implementation complexity." },
+        { "id": "l4", "name": "Fit before choice", "detail": "Selecting an algorithm requires matching its assumptions to the actual problem." }
+      ]
+    }
+  }
+}

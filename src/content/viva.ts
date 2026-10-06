@@ -1,0 +1,29 @@
+import { research } from './research'
+
+// Original question text and responses from the supplied viva handout.
+// DefenseMode treats the paper as the primary authority when they differ.
+export const vivaQuestions = [
+  { question: 'What is the main objective of your research paper?', answer: 'The main objective of my research paper is to analyze and compare the efficiency of algorithms for a specific problem and to propose an optimized approach with better time and space complexity.', note: 'This answer describes a proposed optimization that the research paper does not report. The paper’s stated objectives are listed in the Research section.' },
+  { question: 'Which algorithm have you used in your paper and why?', answer: 'I have used [mention your algorithm name, for example Merge Sort, Dijkstra, or Dynamic Programming]. I used it because it provides optimal results with less time complexity compared to other approaches for this problem statement.', note: 'The answer is a fill-in template with example algorithms. The research paper studies mathematical analysis of recursive algorithms and does not identify one implemented algorithm.' },
+  { question: 'What is the time complexity and space complexity of your algorithm?', answer: 'The time complexity of my algorithm is O(n log n) in the average case and O(n) or O(n squared) in the worst case depending on the algorithm. The space complexity is O(n). I have analyzed it using asymptotic notations.', note: 'This answer gives generic, algorithm-dependent bounds. The research paper does not assign these bounds to a particular algorithm.' },
+  { question: 'What methodology did you follow for your research?', answer: 'I followed standard research methodology which includes problem identification, literature survey, algorithm design, implementation, testing with sample data and complexity analysis.', note: 'This answer claims implementation and testing. The paper instead states that its methodology is descriptive, analytical and literature-based, rather than a large hardware benchmark.' },
+  { question: 'What is the difference between your work and existing work?', answer: 'Existing works focus more on theoretical analysis. My work provides practical implementation, comparative analysis and performance improvement in terms of execution time and resource utilization.', note: 'The paper does not report a practical implementation or measured performance improvement. Its contribution is an organized academic overview.' },
+  { question: 'What are the real world applications of your research?', answer: 'My research can be applied in areas like data searching and sorting, network routing, optimization problems, artificial intelligence and large scale data processing where efficient algorithms are required.', note: 'Use the application domains listed in the paper’s Applications section. This answer also names areas not listed there.' },
+  { question: 'What tools and languages did you use for implementation?', answer: 'I have used Python language for implementation and analysis because it is efficient for algorithm testing. I also used research papers from IEEE and Google Scholar for reference.', note: 'The paper mentions Java, Python or C/C++ as possible tools for a demonstration, but does not claim that an implementation was performed.' },
+  { question: 'What are the limitations of your proposed approach?', answer: 'The limitation of my approach is that its performance may decrease when the input size is extremely large and it may require more memory. This can be improved in future work.', note: 'The paper’s limitations discuss abstraction from hardware and implementation effects, dependence on input assumptions, and possible additional memory or implementation complexity.' },
+  { question: 'What is the future scope of your research?', answer: 'In future this work can be extended by using parallel algorithms, machine learning optimization and testing on larger datasets to further improve efficiency.', note: 'The paper’s future scope lists implementation, empirical benchmarking, visualization, comparing implementations and average-case analysis. It does not list parallel algorithms or machine learning optimization.' },
+  { question: 'What did you learn from this research paper work?', answer: 'From this research I learned how to design an efficient algorithm, analyze its complexity, compare different approaches and how to write and present a research paper systematically.', note: 'This is a general reflective answer in the viva PDF, not a research finding.' },
+] as const
+
+export const alignedAnswers = [
+  `The paper studies mathematical analysis of recursive algorithms, including recurrence relations, recursion trees, substitution and recursive complexity. Its objective is an academic explanation of the concepts, analysis approach, applications and limitations.`,
+  `The paper does not implement one named algorithm. It discusses recursive algorithms as a topic and uses representative examples to explain the analysis methods.`,
+  `There is no single complexity result assigned to an implemented algorithm. The paper explains how time and space requirements can be analyzed with asymptotic notation, including O, Ω and Θ bounds.`,
+  research.methodology,
+  research.contribution,
+  `The paper lists ${research.applications.join(', ')} as application areas. It does not claim that this study implements them.`,
+  `The paper does not report an implementation language as used. It suggests possible implementation in Java, Python or C++ as a future direction.`,
+  research.limitations.join(' '),
+  research.futureScope.join(' '),
+  `The study explains how recurrence relations, recursion trees, substitution and asymptotic notation support analysis of recursive algorithms. Its conclusion emphasizes correctness, resource efficiency and choosing an appropriate representation and implementation.`,
+] as const

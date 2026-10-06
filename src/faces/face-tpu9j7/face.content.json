@@ -1,0 +1,73 @@
+{
+  "blocks": {
+    "sectionNo": { "type": "text", "content": "05 / 06" },
+    "sectionTitle": { "type": "text", "content": "Contribution, Future Scope &amp; Conclusion" },
+    "sectionNote": { "type": "text", "content": "Research Reflection" },
+    "contribLabel": { "type": "text", "content": "What This Study Adds" },
+    "contribStatement": { "type": "text", "content": "An organised analytical treatment of how recursive computation is modelled and evaluated." },
+    "contribDetail": { "type": "text", "content": "The study brings recurrence relations, recursion trees, substitution, asymptotic notation, time and space analysis, applications and practical trade-offs into one coherent account. It is a descriptive, analytical and literature-based study rather than an experimental benchmark." },
+    "futureLabel": { "type": "text", "content": "Future Scope" },
+    "learnLabel": { "type": "text", "content": "Key Learnings" },
+    "conclLabel": { "type": "text", "content": "Conclusion" },
+    "conclusion": { "type": "text", "content": "Recursive algorithms should be evaluated on both correctness and resource efficiency, and asymptotic analysis provides the common language for that comparison." },
+    "conclusionDetail": { "type": "text", "content": "Even when two methods solve the same problem, they can differ significantly in time, auxiliary space, simplicity and behaviour on particular inputs. Understanding these trade-offs is essential for designing scalable software." },
+    "signoff": { "type": "text", "content": "Mathematical Analysis of Recursive Algorithms &middot; Department of Data Science &middot; A.Y. 2026&ndash;2027" },
+    "qLabel": { "type": "text", "content": "Anticipated Questions" },
+    "questions": {
+      "type": "table",
+      "columns": [
+        { "key": "question", "title": "Question", "type": "text" },
+        { "key": "answer", "title": "Answer", "type": "text" }
+      ],
+      "rows": [
+        {
+          "id": "q1",
+          "question": "What did you learn from this project?",
+          "answer": "How recursive structure becomes a recurrence, how that recurrence yields an asymptotic bound, and why time and space must always be judged together."
+        },
+        {
+          "id": "q2",
+          "question": "What can be done in future?",
+          "answer": "Implement the discussed methods, benchmark them empirically on larger inputs, visualise recursion trees and call stacks, compare alternative implementations, and study average-case behaviour on real datasets."
+        }
+      ]
+    },
+    "future": {
+      "type": "table",
+      "columns": [
+        { "key": "name", "title": "Name", "type": "text" },
+        { "key": "detail", "title": "Detail", "type": "text" }
+      ],
+      "rows": [
+        { "id": "f1", "name": "Implementation", "detail": "Working examples in Java, Python or C/C++." },
+        { "id": "f2", "name": "Empirical Benchmarking", "detail": "Measuring behaviour across different input sizes." },
+        { "id": "f3", "name": "Visualization", "detail": "Visualising recursion trees and call stacks." },
+        { "id": "f4", "name": "Comparative Analysis", "detail": "Comparing alternative implementations of one method." },
+        { "id": "f5", "name": "Average-Case Study", "detail": "Analysing behaviour on generated or real datasets." }
+      ]
+    },
+    "learnings": {
+      "type": "table",
+      "columns": [{ "key": "label", "title": "Label", "type": "text" }],
+      "rows": [
+        { "id": "k1", "label": "Recursive algorithms reduce a problem to smaller instances of the same problem, bounded by a base case." },
+        { "id": "k2", "label": "A recurrence such as T(n) = aT(n/b) + f(n) expresses the cost of recursive computation mathematically." },
+        { "id": "k3", "label": "Recursion trees, substitution and standard results give concrete ways to derive asymptotic bounds." },
+        { "id": "k4", "label": "O, &Omega; and &Theta; describe growth independently of processor, language or compiler." },
+        { "id": "k5", "label": "Recursion depth itself consumes auxiliary memory, so time and space are judged together." },
+        { "id": "k6", "label": "Asymptotic analysis is a reliable first framework for scalability, not a prediction of exact runtime." }
+      ]
+    },
+    "chain": {
+      "type": "table",
+      "columns": [{ "key": "label", "title": "Label", "type": "text" }],
+      "rows": [
+        { "id": "ch1", "label": "Recursive structure" },
+        { "id": "ch2", "label": "Mathematical model" },
+        { "id": "ch3", "label": "Complexity analysis" },
+        { "id": "ch4", "label": "Practical interpretation" },
+        { "id": "ch5", "label": "Algorithmic decision" }
+      ]
+    }
+  }
+}
