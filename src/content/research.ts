@@ -25,15 +25,15 @@ export const research = {
   guide: "Prof. Jeicy Sahaya",
   departmentHead: "Prof. Khushali Sharma",
   objective:
-    "To explain the fundamental concepts of mathematical analysis of recursive algorithms; describe principal operations or algorithmic steps; analyze time and space requirements using asymptotic notation; discuss advantages, limitations and suitable applications; and connect theoretical analysis with a representative example.",
+    "To explain the fundamental concepts of mathematical analysis of recursive algorithms; describe principal operations or algorithmic steps; analyze time and space requirements using asymptotic notation; and discuss practical limitations and applications.",
   abstract:
-    "This paper presents a structured study of mathematical analysis of recursive algorithms. It focuses on recurrence relations, recursion trees, substitution, and recursive complexity. Recursive algorithms reduce a problem to smaller instances of the same problem. Their running time is often represented by a recurrence, and the paper discusses how analysis connects algorithmic steps with correctness, resource usage and asymptotic analysis. The study distinguishes theoretical complexity from practical implementation considerations.",
+    "This paper presents a structured study of mathematical analysis of recursive algorithms. It focuses on recurrence relations, recursion trees, substitution, and recursive complexity. Recursive algorithms are often evaluated by reducing the problem to smaller instances and then summarizing the resulting cost using asymptotic notation. The paper also discusses the main limitations of theoretical models when applied to real hardware and irregular inputs.",
   methodology:
-    "The research uses a descriptive and analytical methodology. It defines the topic using standard algorithm terminology, explains principal operations or steps using pseudocode-style reasoning and representative examples, and examines time and space complexity using asymptotic notation. The paper describes this as a literature-based academic study rather than a large hardware benchmark.",
+    "The research uses a descriptive and analytical methodology. It defines the topic using standard algorithm terminology, explains principal operations or steps using pseudocode-style reasoning, and then evaluates time and space complexity. It also highlights the assumptions behind common analytical methods and their practical boundaries.",
   contribution:
-    "The paper organizes an academic overview of recursive-algorithm analysis: its basic purpose, working principles, analysis approach, applications and limitations. It does not report a newly proposed algorithm or a hardware benchmark.",
+    "The paper organizes an academic overview of recursive-algorithm analysis: its basic purpose, working principles, analysis approach, applications and limitations. It does not report a newly invented algorithm but instead synthesises a clear conceptual understanding of how recursive complexity is modelled in practice.",
   conclusion:
-    "The paper presents recurrence relations, recursion trees, substitution and recursive complexity as topics to evaluate through correctness and resource efficiency. It describes asymptotic analysis as a common language for comparing growth as input size increases, and highlights the importance of selecting an appropriate representation and implementation.",
+    "The paper presents recurrence relations, recursion trees, substitution and recursive complexity as topics to evaluate through correctness and resource efficiency. It describes asymptotic analysis as a foundational tool while also emphasizing that hardware effects, input distribution and parallelism create important gaps between theory and actual runtime.",
   equation: "T(n) = aT(n/b) + f(n)",
   equationTerms: [
     { id: "tn", symbol: "T(n)", label: "Running time", description: "The running time for an input of size n, represented by the recurrence." },
@@ -78,10 +78,11 @@ export const research = {
     "Provides a foundation for more advanced algorithmic techniques.",
   ],
   limitations: [
-    "Theoretical complexity does not capture every hardware or implementation effect.",
-    "Some methods depend strongly on input assumptions or data distribution.",
-    "Additional memory or implementation complexity may be required for better performance.",
-    "Choosing an algorithm requires matching its assumptions to the actual problem.",
+    "Pure recurrence models do not fully capture cache misses, memory hierarchy effects and stack-frame allocation costs in real execution environments.",
+    "Classic formulas like T(n)=aT(n/b)+f(n) break down for non-polynomial, non-monotone or uneven recursive structures.",
+    "Parallel recursive algorithms are affected by thread scheduling, thread migration, pool overhead and memory-bus contention, which simplified fork-join models do not reflect accurately.",
+    "Average-case analysis of randomized recursive algorithms becomes mathematically difficult, and exact probability models are intractable beyond familiar examples such as QuickSort.",
+    "Asymptotic analysis remains highly useful, but it cannot replace hardware-aware, input-aware and implementation-aware reasoning for exact runtime prediction.",
   ],
   practicalFactors: ["Memory locality", "Constant factors", "Implementation complexity", "Input distribution", "Frequency of operations", "Correctness requirements"],
   futureScope: [
@@ -99,8 +100,6 @@ export const research = {
     "National Institute of Standards and Technology, Dictionary of Algorithms and Data Structures, NIST.",
   ],
 } as const;
-
-
 
 export const objectives = research.objectives;
 export const methodSteps = research.methodSteps;
